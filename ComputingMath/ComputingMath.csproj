@@ -1,0 +1,132 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{06937E4E-DCE6-4048-AEAC-32E68807190B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ComputingMath</RootNamespace>
+    <AssemblyName>ComputingMath</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="EigenvalueProblems\EigenvalueProblems.cs" />
+    <Compile Include="FunctionCompiling.cs" />
+    <Compile Include="Interpolation\BestInterpolationPolynomial.cs" />
+    <Compile Include="Interpolation\BestInterpolationLeastSquares.cs" />
+    <Compile Include="Exceptions\IncorrectIncomingDataException.cs" />
+    <Compile Include="Interpolation\LagrangeInterpolation.cs" />
+    <Compile Include="LinearAlgebra\Constants\MatrixNormConstants.cs" />
+    <Compile Include="LinearAlgebra\Constants\VectorNormConstants.cs" />
+    <Compile Include="LinearAlgebra\IMatrix.cs" />
+    <Compile Include="LinearAlgebra\ISquareMatrix.cs" />
+    <Compile Include="LinearAlgebra\IToString.cs" />
+    <Compile Include="LinearAlgebra\IVector.cs" />
+    <Compile Include="NumericalDifferentiation\DiffrerntialOperators.cs" />
+    <Compile Include="Exceptions\IncorrectIntegrationMethodException.cs" />
+    <Compile Include="Exceptions\IntegralRangeUndefinedException.cs" />
+    <Compile Include="NumericalIntegration\Integration.cs" />
+    <Compile Include="NumericalIntegration\Constants\IntegrationConstants.cs" />
+    <Compile Include="Exceptions\InvalidRelaxationParameterException.cs" />
+    <Compile Include="Exceptions\NoSolutionException.cs" />
+    <Compile Include="Exceptions\NotDiagonallyDominantException.cs" />
+    <Compile Include="Exceptions\NotSymetricMatrixException.cs" />
+    <Compile Include="SolvingNSAE\NewtonMethod.cs" />
+    <Compile Include="SolvingSLAE\IterativeMethods.cs" />
+    <Compile Include="SolvingSLAE\DirectMethods.cs" />
+    <Compile Include="Exceptions\LinearAlgebraExceptions.cs" />
+    <Compile Include="NumericalIntegration\Integral.cs" />
+    <Compile Include="LinearAlgebra\Matrix.cs" />
+    <Compile Include="Exceptions\ParsingExceptions.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="LinearAlgebra\SquareMatrix.cs" />
+    <Compile Include="LinearAlgebra\Vector.cs" />
+    <Compile Include="SolvingSLAE\LUDecomposition.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="SolvingSLAE\Constants\" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
